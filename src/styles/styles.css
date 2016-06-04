@@ -1,0 +1,16 @@
+#app {
+  font: 14px 'Helvetica Neua', Helvetica, Arial, sans-serif;
+  color: rgba(52, 152, 219,1.0);
+  min-width: 550px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+a.active {
+  color: rgba(211, 84, 0,1.0);
+  text-decoration:none;
+}
+
+nav {
+  padding-top: 20px;
+}
