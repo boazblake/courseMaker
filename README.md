@@ -1,7 +1,7 @@
 
 ## Get Started
 1. **Install [Node 6](https://nodejs.org)**. Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)
-2. **Clone this repository.** - `git@github.com:boazblake/courseMaker.git` or [download the zip](git@github.com:boazblake/courseMaker.git/archive/master.zip)
+2. **Clone this repository.** - `git@github.com:boazblake/courseMaker.git` or [download the zip](https://github.com/boazblake/courseMaker/archive/master.zip)
 3. **Make sure you're in the directory you just created.** - `cd courseMaker`
 4. **Install Node Packages.** - `npm install`
 5. **Run the app.** - `npm start -s`
