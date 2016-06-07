@@ -46,12 +46,12 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
 };
 
 CourseForm.propTypes = {
-  course : React.PropTypes.object.isRequired,
-  allAuthors : React.PropTypes.array,
-  onSave : React.PropTypes.func.isRequired,
-  onChange : React.PropTypes.func.isRequired,
-  loading : React.PropTypes.boolean,
-  errors : React.PropTypes.object
+  course: React.PropTypes.object.isRequired,
+  allAuthors: React.PropTypes.array,
+  onSave: React.PropTypes.func.isRequired,
+  onChange: React.PropTypes.func.isRequired,
+  loading: React.PropTypes.boolean,
+  errors: React.PropTypes.object
 };
 
 export default CourseForm;
