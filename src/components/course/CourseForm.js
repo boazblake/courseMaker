@@ -13,34 +13,35 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
         onChange={onChange}
         error={errors.title}/>
 
-        <SelectInput
-          name="authorId"
-          label="Author"
-          value={course.authorId}
-          defaultOption="select Author"
-          options={allAuthors}
-          onChnage={onChange} error={errors.authorId}/>
+      <SelectInput
+        name="authorId"
+        label="Author"
+        value={course.authorId}
+        defaultOption="select Author"
+        options={allAuthors}
+        onChange={onChange} error={errors.authorId}/>
 
-        <TextInput
-          name="category"
-          label="category"
-          value={course.category}
-          onChange={onChange}
-          error={errors.category}/>
+      <TextInput
+        name="category"
+        label="category"
+        value={course.category}
+        onChange={onChange}
+        error={errors.category}/>
 
-        <TextInput
-          name="length"
-          label="length"
-          value={course.length}
-          onChange={onChange}
-          error={errors.length}/>
+      <TextInput
+        name="length"
+        label="length"
+        value={course.length}
+        onChange={onChange}
+        error={errors.length}/>
 
-        <input
-          name="submit"
-          disabled={loading}
-          value={loading ? 'saving ...' : 'Save'}
-          onChange={onChange}
-          error={errors.length}/>
+      <input
+        name="submit"
+        disabled={loading}
+        value={loading ? 'saving ...' : 'Save'}
+        className="btn btn-primary"
+        onClick={onSave}
+        onChange={onChange}/>
     </form>
   );
 };
@@ -50,7 +51,7 @@ CourseForm.propTypes = {
   allAuthors: React.PropTypes.array,
   onSave: React.PropTypes.func.isRequired,
   onChange: React.PropTypes.func.isRequired,
-  loading: React.PropTypes.boolean,
+  loading: React.PropTypes.bool,
   errors: React.PropTypes.object
 };
 
