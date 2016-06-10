@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import App from './components/app';
+import App from './components/App';
 import AboutPage from './components/about/aboutPage';
 import HomePage from './components/home/homePage';
 import coursesPage from './components/course/CoursesPage';
