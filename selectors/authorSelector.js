@@ -1,4 +1,4 @@
- export function authorsFormattedForDropDown(authors) {
+export function authorsFormattedForDropDown(authors) {
   return authors.map((author) => {
     return {
       value: author.id,
@@ -6,4 +6,3 @@
     };
   });
 }
-

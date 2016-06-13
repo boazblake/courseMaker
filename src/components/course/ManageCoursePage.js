@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as courseActions from '../../actions/courseActions';
 import CourseForm from './CourseForm';
 import toastr from 'toastr';
-import { authorsFormattedForDropDown } from '../../../selectors/authorSelectors';
+import authorsFormattedForDropDown from '../../../selectors/authorSelector';
 
 export class ManageCoursePage extends React.Component {
   constructor(props, context) {
@@ -110,8 +110,6 @@ function mapStateToProps(state, ownProps) {
   if (courseId && state.courses.length > 0) {
     course = getCourseById(state.courses, courseId);
   }
-
-
 
   return {
     course,
