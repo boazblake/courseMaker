@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import * as courseActions from '../../actions/courseActions';
 import CourseForm from './CourseForm';
 import toastr from 'toastr';
-import authorsFormattedForDropDown from '../../../selectors/authorSelector';
 
 export class ManageCoursePage extends React.Component {
   constructor(props, context) {
@@ -100,6 +99,15 @@ function getCourseById(courses, id) {
   const course = courses.filter(course => course.id === id);
   if (course.length) return course[0]; //filter returns an array and I need the first
   return null;
+}
+
+function authorsFormattedForDropDown(authors) {
+  return authors.map(author => {
+    return {
+      value: author.id,
+      text: author.firstName + ' ' + author.lastName
+    };
+  });
 }
 
 function mapStateToProps(state, ownProps) {

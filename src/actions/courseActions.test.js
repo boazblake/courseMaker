@@ -25,7 +25,7 @@ describe('course Actions', () => {
       const action = courseActions.createCourseSuccess(course);
 
       //assertion
-      expect(action).toEqual(expectedActions)
+      expect(action).toEqual(expectedActions);
     });
   });
 });
@@ -41,16 +41,16 @@ describe('Async Actions', () => {
 
   it('should create BEGIN_AJAX_CALL and LOAD_COURSES_SUCCESS when loading', (done) => {
     //example call to nock:
-    nock('http://weather.com/')
-    .get('/courses')
-    .reply(200, {body: {course: [{ id: 1, firstName: 'Boaz', lastName:'Blake'}] }});
+    // nock('http://weather.com/')
+    // .get('/courses')
+    // .reply(200, {body: {course: [{ id: 1, firstName: 'Boaz', lastName:'Blake'}] }});
 
     const expectedActions = [
     {type: types.BEGIN_AJAX_CALL},
     {type: types.LOAD_COURSES_SUCCESS, body: {courses: [{id: 'clean-code', title: 'Clean Code'}]}}
     ];
 
-    const store = mockStore({courses: []}, expectedActions)
+    const store = mockStore({courses: []}, expectedActions);
     store.dispatch(courseActions.loadCourses()).then(() => {
       const actions = store.getActions();
       expect(actions[0].type).toEqual(types.BEGIN_AJAX_CALL);
