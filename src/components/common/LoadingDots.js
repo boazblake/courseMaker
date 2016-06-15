@@ -4,9 +4,6 @@ import React, {PropTypes} from 'react';
 class LoadingDots extends React.Component {
   constructor(props, context) {
     super(props, context);
-}
-
-  getInitialState() {
     this.state = {frame: 1};
   }
 

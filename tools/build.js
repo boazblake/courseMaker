@@ -7,10 +7,12 @@ import webpack from 'webpack';
 import webpackConfig from '../webpack.config.prod';
 import colors from 'colors';
 
-process.env.Node_ENV = 'production'; //this assures the babel dev config (for hot reloading) doesnt apply and is not included in prod build
+process.env.NODE_ENV = 'production'; //this assures the babel dev config (for hot reloading) doesnt apply and is not included in prod build
 
 console.log('Generating minified bundle for production via webpack. This will take a moment, please be patient...'.blue);
-console.log('process.env.Node_ENV', process.env.Node_ENV);
+
+
+console.log('process.env.NODE_ENV is '.bold.green + process.env.NODE_ENV);
 
 webpack(webpackConfig).run((err, stats) => {
   if (err){ //fatal error has occured
@@ -33,7 +35,7 @@ webpack(webpackConfig).run((err, stats) => {
 
   //if here...build is successfull
 
-  console.log('Your app has been compiled into production mode and written to /dist. it\'s ready to disco'.blue);
+  console.log('Your app has been compiled into production mode and written to /dist. it\'s ready to disco'.rainbow);
 
   return 0;
 });

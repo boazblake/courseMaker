@@ -21,7 +21,7 @@ export default {
     contentBase: './dist'
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(), //optimizes order of bundeling files
+    new webpack.optimize.OccurenceOrderPlugin(), //optimizes order of bundeling files
     new webpack.DefinePlugin(GLOBALS), //defines variables for use w the bundled app library - also sets NODE env type for optimum react performance
     new ExtractTextPlugin('styles.css'), // extracts css to another file for prod html use
     new webpack.optimize.DedupePlugin(), // eliminates dup packages to help maiontain small size
@@ -29,7 +29,7 @@ export default {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
+      {test: /\.js$/, include: path.join(__dirname, 'src'), loader: 'babel'},
       {test: /(\.css)$/, loader: ExtractTextPlugin.extract("css?sourceMap")},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},

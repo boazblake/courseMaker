@@ -13,17 +13,17 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
 
   /*since a seperarte stylesheet is only utelized for the productuion build, need to dynamicly*/
 
-  $('head').prepend('<link rel="stylesheet" href="styles.css">');
+  $('head').prepend('\u000D <link rel="stylesheet" href="styles.css">');
 
   fs.writeFile('dist/index.html', $.html(), 'utf8', function (err) {
 
-    fs.exists("dist/index.html", function(fileok){
-      if(fileok)fs.readFile("dist/index.html", function(error, data) {
-        console.log("Contents: " + data);
-      });
-      else console.log("file not found".yellow);
-    });
-    console.log("Carry on executing".green);
+    // fs.exists("dist/index.html", function(fileok){
+    //   if(fileok)fs.readFile("dist/index.html", function(error, data) {
+    //     console.log("Contents: " + data);
+    //   });
+    //   else console.log("file not found".yellow);
+    // });
+    // console.log("Carry on executing".green);
 
 
     if (err) {
