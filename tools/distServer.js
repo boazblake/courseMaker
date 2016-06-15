@@ -15,7 +15,7 @@ app.get('*', function(req, res) {
 
 app.listen(port, function(err) {
   if (err) {
-    console.log(err.bold.red);
+    console.log(err.red);
   } else {
     open(`http://localhost:${port}`);
   }

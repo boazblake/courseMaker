@@ -1,4 +1,5 @@
 /*the comment below is for the linter to stop[ it complaining about the lack of export in configureStore*/
+
 /*eslint-disable import/default*/
 import 'babel-polyfill';
 import React from 'react';

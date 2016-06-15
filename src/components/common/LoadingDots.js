@@ -4,10 +4,11 @@ import React, {PropTypes} from 'react';
 class LoadingDots extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    this.state = {frame: 1};
 }
 
+  getInitialState() {
+    this.state = {frame: 1};
+  }
 
   componentDidMount() {
     this.interval = setInterval(() => {
